@@ -26,11 +26,7 @@ body {
   -webkit-transition: ease-in-out;
   -webkit-transition: -webkit-transform 1s;
   transition: all 1s;
-  /* min-height: 80vh; */
-}
-
-.projects > #project-name {
-  font-size: 0px;
+  min-height: 80vh;
 }
 
 .font-formatted-1 {
@@ -230,6 +226,15 @@ body {
   border-radius: 10px;
 }
 
+.work-experience > div {
+  padding: 1rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.promotion {
+  margin: 90px 30px -30px 30px;
+}
+
 @media only screen and (max-width: 450px) {
   .about {
     grid-template-columns: auto;
@@ -365,8 +370,20 @@ body {
     font-size: 1rem;
   }
 
-  h4#project-name {
+  h4.project-name {
     font-size: 16px;
+  }
+
+  .work-experience > div {
+    padding: 0.5rem;
+    font-family: "Oswald", sans-serif;
+  }
+
+  .promotion {
+    margin: 40px 30px -30px 30px;
+  }
+  .promotion > small {
+    font-size: 8px;
   }
 }
 
