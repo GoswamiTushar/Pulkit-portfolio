@@ -47,7 +47,7 @@ function ChangeData() {
   } else if (count < projectsName.length) {
     document.getElementById(
       "project-name"
-    ).innerHTML = `<h1 style="font-weight:400">${projectsName[count]}</h1>`;
+    ).innerHTML = `${projectsName[count]}`;
     document.getElementById("project-description").innerHTML = `${
       projectDesc[projectsName[count]]
     }`;

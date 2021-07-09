@@ -12,6 +12,26 @@ body {
   background-color: rgba(246, 246, 246, 0.733);
 }
 
+.projects {
+  margin: 1.3rem;
+  padding: 3rem;
+  background-color: white;
+  margin: 1.3rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.465);
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px rgb(218, 218, 218);
+  transition: cubic-bezier(1, 0, 0, 1);
+  column-gap: 20px;
+  -webkit-transition: ease-in-out;
+  -webkit-transition: -webkit-transform 1s;
+  transition: all 1s;
+}
+
+.projects > #project-name {
+  font-size: 0px;
+}
+
 .font-formatted-1 {
   font-family: "Roboto", sans-serif;
 }
@@ -225,7 +245,6 @@ body {
     transition: all 1s;
   }
   .name-heading {
-    font-size: 2rem;
     color: rgb(54, 54, 54);
   }
 
