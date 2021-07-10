@@ -385,6 +385,10 @@ body {
   .promotion > small {
     font-size: 8px;
   }
+
+  footer > div > ul > li {
+    font-size: 11px;
+  }
 }
 
 @media only screen and (min-width: 450px) {

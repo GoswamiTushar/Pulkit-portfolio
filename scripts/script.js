@@ -37,7 +37,6 @@ const skillsAndTools = {
 const projectLinks = {};
 
 const projectsName = Object.keys(projectDesc);
-console.log(projectsName);
 var count = 0;
 ChangeData();
 
