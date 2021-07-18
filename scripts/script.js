@@ -71,7 +71,7 @@ document.getElementById("projects").addEventListener("mouseleave", () => {
 });
 
 document.getElementById("projects").addEventListener("touchstart", () => {
-  toPause = false;
+  toPause = true;
 });
 
 document.getElementById("projects").addEventListener("touchcancel", () => {
