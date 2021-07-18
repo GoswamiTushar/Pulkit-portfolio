@@ -95,7 +95,7 @@ function ChangeData() {
       skillsAndTools[projectsName[count]]
     }`;
   }
-  setTimeout(ChangeData, 2000);
+  setTimeout(ChangeData, 3500);
   if (toPause) {
     count = count;
   }
