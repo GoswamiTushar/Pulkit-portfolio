@@ -18,6 +18,9 @@ var languageDescriptionModal = document.getElementById("project-desc");
 var listitems = document.getElementById("list-items");
 
 const projectDesc = {
+  "Evaluated the impact of change in temperature of Cold Storage products during the year":
+    "The project computed the mean cold storage temperature in different seasons and used hypothesis testing to evaluate if any corrective action is required from the plant's side or the procurement's side.",
+
   "Developed Time Series Forecasting for Australian Monthly <br/>Gas Production":
     "The project involved analysis of components of Time Series data, checking the seasonality fluctuations, monthly plot, decomposition of series, checking the stationarity of series, DE-seasonalise, decomposition of series, manual Arima (ACF & PACF Tests), Auto Arima, residual analysis.",
 
@@ -35,9 +38,6 @@ const projectDesc = {
 
   "Theft Analytics for Discom":
     "Worked on it by using predictive modelling techniques, data cleaning methods and various machine learning models with least misclassification errors while identifying defaulters and non-defaulters, in R & Python and prescribed the corrective actions to the respective DISCOM in order to reduce AT&C Losses.",
-
-  "Evaluated the impact of change in temperature of Cold Storage products <br/>during the year":
-    "The project computed the mean cold storage temperature in different seasons and used hypothesis testing to evaluate if any corrective action is required from the plant's side or the procurement's side.",
 };
 
 const skillsAndTools = {
@@ -45,7 +45,7 @@ const skillsAndTools = {
     "Manual Arima fitting & Auto Arima model fitting, Hands on R",
   "Market Segmentation in the context of Product <br/>Service Management":
     "Factor Analysis, Multiple Linear Regression, Correlation Matrix, Market Segmentation",
-  "Evaluated the impact of change in temperature of Cold Storage products <br/>during the year":
+  "Evaluated the impact of change in temperature of Cold Storage products during the year":
     "Descriptive Statistics, Inferential Statistics, Estimation & Hypothesis Testing, Predictive Modelling, Market Basket Analysis",
   "Visualizing Car Insurance Claims using Tableau":
     "Data Visualisation, Tableau, Business Intelligence",
@@ -53,15 +53,27 @@ const skillsAndTools = {
     "Bagging & Boosting, KNN, Naive Bayes, Logistic Regression",
   "Cellphone-Logistic project":
     "Logistic Regression, Model Comparison, Predictive Analytics",
-  "Theft Analytics for Discom": "NA",
+  "Theft Analytics for Discom":
+    "Predictive Modeling, Clustering, Tableau & Prescriptive Analysis, Logistic Regression, Random Forest",
 };
 const projectLinks = {};
 
 const projectsName = Object.keys(projectDesc);
 var count = 0;
+var toPause;
 ChangeData();
 
+document.getElementById("projects").addEventListener("mouseover", () => {
+  toPause = true;
+});
+document.getElementById("projects").addEventListener("mouseleave", () => {
+  toPause = false;
+});
+
 function ChangeData() {
+  if (!toPause) {
+    count += 1;
+  }
   if (count === projectsName.length) {
     count = 0;
   } else if (count < projectsName.length) {
@@ -75,6 +87,8 @@ function ChangeData() {
       skillsAndTools[projectsName[count]]
     }`;
   }
-  count += 1;
-  setTimeout(ChangeData, 5000);
+  setTimeout(ChangeData, 2000);
+  if (toPause) {
+    count = count;
+  }
 }
