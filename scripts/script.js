@@ -70,6 +70,14 @@ document.getElementById("projects").addEventListener("mouseleave", () => {
   toPause = false;
 });
 
+document.getElementById("projects").addEventListener("touchstart", () => {
+  toPause = false;
+});
+
+document.getElementById("projects").addEventListener("touchcancel", () => {
+  toPause = false;
+});
+
 function ChangeData() {
   if (!toPause) {
     count += 1;
